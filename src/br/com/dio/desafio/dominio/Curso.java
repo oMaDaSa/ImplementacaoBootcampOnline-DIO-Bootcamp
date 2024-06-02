@@ -9,9 +9,10 @@ public class Curso extends Conteudo{
         return XP_PADRAO * cargaHoraria;
     }
 
-    public Curso() {
+    public Curso(String titulo, String descricao, int cargaHoraria) {
+        super(titulo, descricao);
+        setCargaHoraria(cargaHoraria);
     }
-
 
     public int getCargaHoraria() {
         return cargaHoraria;
@@ -23,10 +24,9 @@ public class Curso extends Conteudo{
 
     @Override
     public String toString() {
-        return "Curso{" +
-                "titulo='" + getTitulo() + '\'' +
-                ", descricao='" + getDescricao() + '\'' +
-                ", cargaHoraria=" + cargaHoraria +
-                '}';
+        return "Curso:\n" +
+                "\ttitulo=" + getTitulo() + '\n' +
+                "\tdescricao=" + getDescricao() + '\n' +
+                "\tcarga horaria=" + getCargaHoraria() + '\n';
     }
 }
