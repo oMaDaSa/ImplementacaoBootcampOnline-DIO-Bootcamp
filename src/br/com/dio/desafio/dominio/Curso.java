@@ -9,8 +9,8 @@ public class Curso extends Conteudo{
         return XP_PADRAO * cargaHoraria;
     }
 
-    public Curso(String titulo, String descricao, int cargaHoraria) {
-        super(titulo, descricao);
+    public Curso(String titulo, String descricao, Professor professor, int cargaHoraria) {
+        super(titulo, descricao, professor);
         setCargaHoraria(cargaHoraria);
     }
 

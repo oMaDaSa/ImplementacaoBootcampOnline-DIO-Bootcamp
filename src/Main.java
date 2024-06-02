@@ -4,11 +4,13 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        Curso curso1 = new Curso("curso java", "descrição curso java", 8);
+        Professor profMatheus = new Professor("Matheus");
 
-        Curso curso2 = new Curso("curso js", "descrição curso js", 4);
+        Curso curso1 = new Curso("curso java", "descrição curso java", profMatheus, 8);
 
-        Mentoria mentoria = new Mentoria("mentoria de java", "descrição mentoria java", LocalDate.now());
+        Curso curso2 = new Curso("curso js", "descrição curso js", profMatheus,4);
+
+        Mentoria mentoria = new Mentoria("mentoria de java", "descrição mentoria java", profMatheus, LocalDate.now());
 
         /*System.out.println(curso1);
         System.out.println(curso2);
@@ -47,6 +49,9 @@ public class Main {
         devJoao.getConteudosConcluidos().forEach(System.out::println);
         System.out.println("XP:" + devJoao.calcularTotalXp());
 
+        System.out.println("-------");
+        System.out.println("Conteúdos ministrados por Matheus:");
+        profMatheus.getConteudos().forEach(System.out::println);
     }
 
 }

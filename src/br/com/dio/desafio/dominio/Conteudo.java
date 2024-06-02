@@ -7,9 +7,13 @@ public abstract class Conteudo {
     private String titulo;
     private String descricao;
 
-    public Conteudo(String titulo, String descricao) {
+    private Professor professor;
+
+    public Conteudo(String titulo, String descricao, Professor professor) {
         this.titulo = titulo;
         this.descricao = descricao;
+        this.professor = professor;
+        professor.adicionarConteudo(this);
     }
     public abstract double calcularXp();
 

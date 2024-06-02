@@ -2,13 +2,12 @@ package br.com.dio.desafio.dominio;
 
 import java.util.*;
 
-public class Dev {
-    private String nome;
+public class Dev extends Pessoa{
     private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
     private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
 
     public Dev(String nome) {
-        setNome(nome);
+        super(nome);
     }
 
     public void inscreverBootcamp(Bootcamp bootcamp){
@@ -41,14 +40,6 @@ public class Dev {
                 .sum();*/
     }
 
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 
     public Set<Conteudo> getConteudosInscritos() {
         return conteudosInscritos;
